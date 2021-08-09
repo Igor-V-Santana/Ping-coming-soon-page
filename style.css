@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/************ CONTAINER TOP ********************/
+.container-top{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container-top img{
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+.container-top h1{
+    font-size: 2.5em;
+    color: hsl(0, 0%, 59%);
+    font-weight: 500;
+}
+.container-top span{
+    color: black;
+    font-weight: 800;
+}
+.container-top p{
+    font-size: 1em;
+    margin-top: .8em;
+    color: rgba(0,0,0,0.7);
+}
+
+.input-field input{
+    padding: 1.5em;
+    width: 30em;
+    border-radius: 50px;
+    outline: none;
+    border: 2px solid hsla(0, 0%, 59%, 0.137);
+    margin-top: 3em;
+    color: rgba(0,0,0,0.5);
+}
+.input-field input::placeholder{
+    color: hsla(0, 0%, 59%, 0.63);
+}
+.input-field button{
+    padding: 1.5em;
+    width: 12em;
+    border-radius: 50px;
+    background-color: hsl(223, 87%, 63%);
+    color: white;
+    cursor: pointer;
+    transition: 1.2s;
+}
+.input-field button:hover{
+    opacity: 0.6;
+}
+
+
+
+/************ CONTAINER BOTTOM ********************/
+.container-bottom{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-bottom img{
+    min-width: 5%;
+    height: 60%;
+    position: relative;
+    top: 1%;
+}
+.social-medias{
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+    position: relative;
+}
+.icon{
+    background: white;
+    border-radius: 50%;
+    padding: .7em 1em;
+    font-size: .9em;
+    border: 1px solid hsla(0, 0%, 59%, 0.397);
+    color: hsl(223, 87%, 63%);
+    cursor: pointer;
+    transition: 1.2s;
+}
+.icon:hover{
+    transform: translateY(-50%);
+    opacity: 0.3;
+}
+
+.container-bottom p{
+    font-size: 1em;
+    color: hsl(0, 0%, 50%);
+}
+
+
+
+
+/************* RESPONSIVO ********************/
+@media(max-width: 800px){
+    .social-medias{
+        width: 50%;
+    }
+    .input-field{
+        display: flex;
+        flex-direction: column;
+    }
+    .input-field button{
+        margin-top: .8em;
+        padding: 1.5em;
+        width: 30em;
+    }
+    .container-top{
+        height: 70vh;
+    }
+    .container-bottom img{
+        width: 80%;
+    }
+}
+
+@media(max-width: 440px){
+    .container-top h1{
+        font-size: 1.7em;
+    }
+    .input-field input{
+        width: 20em;
+    }
+    .input-field button{
+        width: 20em;
+    }
+    .container-bottom p{
+        font-size: .7em;
+    }
+}
+@media(max-width: 300px){
+    .container-top h1{
+        font-size: 1.4em
+    };
+}
